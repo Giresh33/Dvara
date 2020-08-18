@@ -5,7 +5,6 @@ from .forms import PersonForm
 from django.shortcuts import render
 
 class PersonListView(ListView):
-    print('=----------==listviewwwwwww')
     model = Person
     context_object_name = 'person'
     # template_name = "person_form.html"
