@@ -1,0 +1,32 @@
+
+{% block content %}
+
+  <p>
+    <a href="{% url 'person_add' %}">Add person</a>
+  </p>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Subcategory</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for person in people %}
+        <tr>
+          <td><a href="{% url 'person_change' person.pk %}">{{ person.name }}</a></td>
+          <td>{{ person.birthdate }}</td>
+          <td>{{ person.country.name }}</td>
+          <td>{{ person.city.name }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="4">No person in the database. <a href="{% url 'person_add' %}">Add the first person</a>.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
