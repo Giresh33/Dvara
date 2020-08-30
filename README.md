@@ -1,3 +1,0 @@
-# dvara
-
-simple Dependency Dropdown.
