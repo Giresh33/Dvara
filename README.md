@@ -1,3 +1,3 @@
 # dvara
 
-simple Dependency Dropdown.
+Simple Dependency Dropdown(Category and Subcategory).
